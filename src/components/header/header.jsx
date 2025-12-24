@@ -14,7 +14,7 @@ export const Header = () => {
       </div>
     </div>
     <code className="color-primary">
-      v 1.0
+    
     </code>
   </div>;
 };
