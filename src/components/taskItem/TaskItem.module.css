@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid;
+  padding: 24px;
+  cursor: pointer;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.default {
+  background-color: #171717;
+  border-color: #272727;
+}
+
+.default:hover {
+  background-color: rgba(59, 121, 246, 0.03);
+  border-color: rgba(59, 121, 246, 0.15);
+}
+
+.success {
+  background-color: rgba(84, 255, 14, 0.04);
+  border-color: rgba(84, 255, 14, 0.15);
+}
+
+.success:hover {
+  background-color: rgba(84, 255, 14, 0.07);
+  border-color: rgba(84, 255, 14, 0.2);
+}
+
+.id {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9999px;
+  font-weight: 900;
+  margin: 0 2px;
+  font-size: 0.8em;
+  font-weight: 900;
+}
+
+.idDefault {
+  background-color: rgba(59, 121, 246, 0.15);
+  color: #2870ff;
+}
+
+.idSuccess {
+  background-color: rgba(84, 255, 14, 0.15);
+  color: rgba(84, 255, 14, 0.4);
+}
+
+.contentDefault {
+  color: white;
+}
+
+.contentSuccess {
+  text-decoration: line-through;
+  color: rgba(84, 255, 14, 0.4);
+}
