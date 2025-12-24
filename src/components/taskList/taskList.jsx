@@ -1,5 +1,5 @@
 import styles from "./TaskList.module.css";
-import { TaskItem} from '../TaskItem/TaskItem'
+import { TaskItem } from '../taskItem/taskItem'
 
 export const TaskList = ( {taskList,incompletedTasks, updateTaskStatus, deleteTask}  ) => {
  
