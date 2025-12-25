@@ -7,9 +7,32 @@ const apiClient = axios.create({
   headers: { 'Content-Type': 'application/json' },
 });
 
-export const fetchTodos = async () => {
-  const response = await apiClient.get('/todos/lists');
-  return response.data; // TaskDto[]
+ 
+/**
+ * @typedef {Object} FetchTodosOptions
+ * @property {number} [page]
+ * @property {number} [pageSize]
+ */
+
+/**
+ * @param {FetchTodosOptions} [options]
+ * @returns {Promise<{todos: TaskDto[], total: number}>}
+ */
+export const fetchTodos = async ({ page = 1, pageSize } = {}) => {
+  const response = await apiClient.get('/todos/lists', {
+    params: { page, pageSize },
+  });
+
+  const data = response.data;
+
+  if (Array.isArray(data)) {
+    return { todos: data, total: data.length };
+  }
+
+  const todos = data?.items ?? data?.todos ?? [];
+  const total = Number.isFinite(data?.total) ? data.total : todos.length;
+
+  return { todos, total };
 };
 
 /** @param {Pick<TaskDto, "title">} dto */

@@ -37,4 +37,10 @@ export const TaskList = ({ taskList, incompletedTasks, updateTaskStatus, deleteT
             </ul>
         </div>;
     }
+
+    return <div className="box">
+        <h2 className={styles.title}>
+            Aucune tache disponible. Ajoutez-en une nouvelle !
+        </h2>
+    </div>;
 }
