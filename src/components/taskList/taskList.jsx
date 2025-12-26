@@ -17,10 +17,10 @@ export const TaskList = ({ taskList, incompletedTasks, updateTaskStatus, deleteT
         return <div className="box">
             <h2 className={styles.title}>
                 {incompletedTasks > 0 && (
-                    <> Il reste {incompletedTasks} taches a faire</>
+                    <> Il reste {incompletedTasks} taches a faire sur cette page</>
                 )}
                 {incompletedTasks == 0 && (
-                    <> Toutes les taches sont terminées</>
+                    <> Toutes les taches de cette page sont terminées</>
                 )}
             </h2>
 

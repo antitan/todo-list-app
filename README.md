@@ -2,6 +2,8 @@
 
 commande :  npm create vite@latest todo-list-app -- --template react
 
+npx vite build --mode production
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
