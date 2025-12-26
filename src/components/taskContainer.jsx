@@ -34,6 +34,7 @@ export const TaskContainer = () => {
             }
         }; 
         loadTodos(); 
+        //merci a chat gpt pour cette optimisation
     }, [currentPage, todosPerPage]);
 
      const addNewTask = async (title) => 
